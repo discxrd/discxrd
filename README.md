@@ -13,5 +13,17 @@
   <div id="views">
     <img src="https://komarev.com/ghpvc/?username=discxrd&style=flat-square&color=blue" alt="views"/>
   </div>
+  ## Обо мне:
+  Fullstack разработчик (в приоритете Frontend)
+  Фреймворки:
+  - React/Native + TailwindCSS + Effector + Atomic-Router
+  - NestJS + TypeORM
+  - PostgreSQL/MySQL
+  Языки:
+  - Python
+  - JavaScript
+  - TypeScript
+  - C#
+  - Smali (dalvik bytecode)
 </div>
 
