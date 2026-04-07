@@ -1,0 +1,28 @@
+name: Metrics
+on:
+  # Обновление раз в сутки
+  schedule: [{cron: "0 0 * * *"}]
+  # Позволяет запускать генерацию вручную
+  workflow_dispatch:
+  # Обновляет при пуше в main/master
+  push: {branches: ["master", "main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # GitHub сам выдаст этот токен, ничего создавать не нужно
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: discxrd
+          template: classic
+          base: header, repositories
+          config_theme: dark
+          
+          # Плагины для языков и строк кода
+          plugin_languages: yes
+          plugin_languages_limit: 5
+          plugin_lines: yes
